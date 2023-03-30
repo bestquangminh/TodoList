@@ -1,0 +1,63 @@
+#container {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+.box {
+    width: 300px;
+    min-height: 300px;
+    margin: auto;
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid;
+    background-color: #efefef;
+}
+
+.box__header {
+    text-align: center;
+}
+
+.box__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box__add-btn {
+    border: none;
+    background-color: transparent;
+}
+
+.box__add-btn-icon {
+    font-size: 16px;
+}
+
+.box__add-input {
+    min-height: 30px;
+    border-radius: 10px;
+    border-color: black;
+}
+
+.box__list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.box__list-items{
+    display: flex;
+    margin-top: 8px;
+}
+
+.box__list-content-input {
+    margin-left: 5px;
+    border: 0;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.box__list-content-input--checked {
+    text-decoration: line-through;
+    color: grey;
+}
