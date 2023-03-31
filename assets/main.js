@@ -37,7 +37,6 @@ renderList = (val) => {
  const liArray = Array.from(liElements).map(li => li.outerHTML);
  localStorage.setItem('listItems', JSON.stringify(liArray));
 handleCheckbox();
- 
 }
 
 window.addEventListener('load', () => {
@@ -71,3 +70,16 @@ saveItem = () => {
   const liArray = Array.from(liElements).map(li => li.outerHTML);
   localStorage.setItem('listItems', JSON.stringify(liArray));
 }
+
+// checkValueInput = () => {
+//   const liInput = this.parentNode.querySelector('.box__list-content-input'); 
+//   console.log(liInput);
+//   liInput.onblur = () => {
+//     if(liInput.value == '') {
+//       console.log('empty');
+//     }
+//   }
+// }
+
+// checkValueInput();
+
