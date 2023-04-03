@@ -44,6 +44,8 @@ window.addEventListener('load', () => {
     if (savedListItems) {
       ul.innerHTML = savedListItems.join('');
       handleCheckbox();
+      checkValueInput();
+
     }
   });
 handleCheckbox = () => {
@@ -71,15 +73,22 @@ saveItem = () => {
   localStorage.setItem('listItems', JSON.stringify(liArray));
 }
 
-// checkValueInput = () => {
-//   const liInput = this.parentNode.querySelector('.box__list-content-input'); 
-//   console.log(liInput);
-//   liInput.onblur = () => {
-//     if(liInput.value == '') {
-//       console.log('empty');
-//     }
-//   }
-// }
+checkValueInput = () => {
+  const liInput = $$('.box__list-content-input')
+  liInput.forEach(function(input){
+    input.addEventListener('change', function(e){
+      if(input.value === '') {
+        this.closest('.box__list-items').remove();
+        saveItem();
+       }
+    }) 
+    })
+  // console.log(liInput);
+  // liInput.onblur = () => {
+  //   if(liInput.value == '') {
+  //     console.log('empty');
+  //   }
+  // }
+}
 
-// checkValueInput();
 
