@@ -36,7 +36,7 @@ renderList = (val) => {
  const liElements = ul.querySelectorAll('.box__list-items');
  const liArray = Array.from(liElements).map(li => li.outerHTML);
  localStorage.setItem('listItems', JSON.stringify(liArray));
-handleCheckbox();
+// handleCheckbox();
 }
 
 window.addEventListener('load', () => {
@@ -83,12 +83,6 @@ checkValueInput = () => {
        }
     }) 
     })
-  // console.log(liInput);
-  // liInput.onblur = () => {
-  //   if(liInput.value == '') {
-  //     console.log('empty');
-  //   }
-  // }
 }
 
 

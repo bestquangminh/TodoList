@@ -63,5 +63,6 @@
 }
 
 .box__list-checkbox{
-    width: 30px;
+    min-width: 30px;
+    /* min-height: 30px; */
 }
